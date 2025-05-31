@@ -756,5 +756,28 @@ div class="carousel-item">
         </footer>
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script>
+    function toggleCaption(button) {
+        const caption = button.parentElement;
+        caption.classList.toggle('expanded');
+        
+        // Opcional: Ajustar la posición si es necesario
+        if (caption.classList.contains('expanded')) {
+            caption.style.bottom = '1rem';
+        } else {
+            caption.style.bottom = '0.5rem';
+        }
+    }
+
+    // Opcional: Cerrar todos los captions al cambiar de slide
+    document.querySelectorAll('.carousel').forEach(carousel => {
+        carousel.addEventListener('slide.bs.carousel', function () {
+            this.querySelectorAll('.carousel-caption.expanded').forEach(caption => {
+                caption.classList.remove('expanded');
+                caption.style.bottom = '0.5rem';
+            });
+        });
+    });
+    </script>
   </body>
 </html>
