@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+    
+    <url>
+        <loc>https://laislabtc.org/</loc>
+        <lastmod>2026-02-01</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+    
+    <!-- Images with their metadata -->
+    <url>
+        <loc>https://laislabtc.org/img/logo-laislabtc-minimalista.jpg</loc>
+        <lastmod>2024-11-16</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.8</priority>
+        <image:image>
+            <image:loc>https://laislabtc.org/img/logo-laislabtc-minimalista.jpg</image:loc>
+            <image:title>Logo La IslaBTC - Comunidad Bitcoin</image:title>
+            <image:caption>Logo minimalista de La IslaBTC, comunidad Bitcoin en la Isla de la Juventud, Cuba</image:caption>
+        </image:image>
+    </url>
+    
+</urlset>

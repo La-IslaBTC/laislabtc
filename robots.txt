@@ -1,0 +1,16 @@
+User-agent: *
+Allow: /
+Allow: /css/
+Allow: /img/
+Allow: /js/
+
+# Sitemap
+Sitemap: https://laislabtc.org/sitemap.xml
+
+# Block common non-content paths
+Disallow: /temp/
+Disallow: /.git/
+Disallow: /*.log$
+
+# Crawl-delay for respectful crawling
+Crawl-delay: 1

@@ -64,6 +64,7 @@
                     <li class="nav-item"><a class="nav-link" href="#">Inicio</a></li>
                     <li class="nav-item"><a class="nav-link" href="#scrollspynevents">POW</a></li>
                     <li class="nav-item"><a class="nav-link" href="#scrollspydonaciones">Dona</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#scrollspyyouth">Jóvenes</a></li>
                     <li class="nav-item"><a class="nav-link" href="#scrollspybusiness">Negocios</a></li>
                     <li class="nav-item"><a class="nav-link" href="#scrollspymedia">Multimedia</a></li>
                     <li class="nav-item"><a class="nav-link" href="#scrollspycontact">Contacto</a></li>
@@ -144,8 +145,8 @@
                             </div>
                             <div class="col-md-4 col-lg-4">
                                 <i class="bi bi-people fs-1 text-warning"></i>
-                                <h4 class="fw-bold mt-2">13</h4>
-                                <p class="text-muted small fst-italic">Encuentros educativos organizados por la comunidad en 1 año de creada</p>
+                                <h4 class="fw-bold mt-2">14</h4>
+                                <p class="text-muted small fst-italic">Encuentros educativos organizados por la comunidad desde <strong>Noviembre 2024</strong></p>
                             </div>
                             <div class="col-md-4 col-lg-4">
                                 <i class="bi bi-shop fs-1 text-warning"></i>
@@ -163,6 +164,13 @@
                 <button class="btn btn-dark" type="button" data-bs-toggle="collapse" data-bs-target="#timelineCollapse" aria-expanded="false" aria-controls="timelineCollapse">📜 Ver historial completo de eventos</button>
                 <div class="collapse" id="timelineCollapse">
                     <div class="main-timeline">
+                        <div class="timeline left">
+                            <div class="card"><div class="card-body p-4">
+                                <h3>2026 - 17 DE ENERO</h3>
+                                <p class="text-uppercase">Evento Blockstream Local 2026.</p>
+                                <p class="text-muted">Regresó la AUTOCUSTODIA a La IslaBTC. <strong>Profesor:</strong> Yuri (Profesor y fundador de la comunidad La IslaBTC)</p>
+                            </div></div>
+                        </div>
                         <div class="timeline right">
                             <div class="card"><div class="card-body p-4">
                                 <h3>2025 - 20 DE DICIEMBRE</h3>
@@ -389,8 +397,102 @@
         </div>
     </section>
 
+    <!-- Jóvenes -->
+    <section class="py-5 bg-dark text-light" id="scrollspyyouth" aria-labelledby="jovenes-heading">
+        <div class="container-xl px-5 my-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <h2 class="fw-bolder display-6 text-uppercase text-center" id="jovenes-heading">Programa Jóvenes Programadores Bitcoin</h2>
+                    <p class="lead text-center mt-3">Programa de formación para jóvenes programadores que crearán las herramientas de la comunidad Bitcoin. 3 fases intensivas durante 2025.</p>
+                    
+                    <h3 class="text-center mb-3 fw-bold">Inscripción al Programa</h3>
+                    <p class="text-center text-muted mb-3">Completa el formulario para recibir información sobre nuestras 3 fases.</p>
+                    
+                    <h4 class="text-center fw-bold mb-3">Fases del Programa</h4>
+                    <div class="row text-center mb-4">
+                        <div class="col-md-4 mb-2">
+                            <div class="p-2 border rounded">
+                                <h6 class="fw-bold text-warning">Fase 1</h6>
+                                <p class="small mb-0">Fundamentos Técnicos de Bitcoin</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-2">
+                            <div class="p-2 border rounded">
+                                <h6 class="fw-bold text-warning">Fase 2</h6>
+                                <p class="small mb-0">Programación y Lógica</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-2">
+                            <div class="p-2 border rounded">
+                                <h6 class="fw-bold text-warning">Fase 3</h6>
+                                <p class="small mb-0">Hackaton Comunitario</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <form id="formJovenes" class="mb-4">
+                        <div class="mb-3">
+                            <label for="aliasJoven" class="form-label fw-bold">Alias *</label>
+                            <input type="text" class="form-control" id="aliasJoven" name="alias" required placeholder="Tu alias o nombre de usuario">
+                            <div class="form-text">Usaremos este alias para identificarte en la comunidad.</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="emailJoven" class="form-label fw-bold">Correo electrónico *</label>
+                            <input type="email" class="form-control" id="emailJoven" name="email" required placeholder="tu@email.com">
+                            <div class="form-text">Te enviaremos información sobre fechas y horarios de las fases.</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="experiencia" class="form-label fw-bold">Nivel de experiencia en programación</label>
+                            <select class="form-select" id="experiencia" name="experiencia" required>
+                                <option value="">Selecciona tu nivel</option>
+                                <option value="principiante">Principiante (sin experiencia)</option>
+                                <option value="basico">Básico (conocimientos fundamentales)</option>
+                                <option value="intermedio">Intermedio (proyectos personales)</option>
+                                <option value="avanzado">Avanzado (experiencia profesional)</option>
+                            </select>
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-warning btn-lg px-5 py-2 fw-bold">Inscribirme al Programa</button>
+                        </div>
+                    </form>
+                    
+                    <div id="mensajeExitoJovenes" class="alert alert-success mt-2 d-none" role="alert">
+                        <strong>¡Inscripción recibida!</strong> Nos pondremos en contacto contigo pronto con la información detallada de las 3 fases del programa.
+                    </div>
+                    
+                    <div id="mensajeErrorJovenes" class="alert alert-danger mt-2 d-none" role="alert">
+                        <strong>Error:</strong> Por favor, completa todos los campos requeridos.
+                    </div>
+                    
+                    <hr class="my-4">
+                    
+                    <div class="text-center">
+                        <h4 class="fw-bold mb-3">Herramientas que Construiremos</h4>
+                        <div class="row">
+                            <div class="col-md-4 mb-2">
+                                <i class="bi bi-wallet2 fs-4 text-warning"></i>
+                                <h6 class="mt-1">Billeteras Bitcoin</h6>
+                                <p class="small">Desarrollo de wallets seguras para la comunidad</p>
+                            </div>
+                            <div class="col-md-4 mb-2">
+                                <i class="bi bi-lightning-charge fs-4 text-warning"></i>
+                                <h6 class="mt-1">Soluciones Lightning</h6>
+                                <p class="small">Herramientas para pagos instantáneos</p>
+                            </div>
+                            <div class="col-md-4 mb-2">
+                                <i class="bi bi-gear-fill fs-4 text-warning"></i>
+                                <h6 class="mt-1">Opensource</h6>
+                                <p class="small">Software libre para el ecosistema</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Multimedia -->
-    <section class="py-5 bg-dark text-light" id="scrollspymedia">
+    <section class="py-5 bg-light" id="scrollspymedia">
         <div class="container-xl px-5 my-5">
             <div class="row gx-5 align-items-center">
                 <div class="col-lg-12 text-center mb-4">
@@ -409,7 +511,7 @@
                     </div>
                 </div>
                 <div class="col-md-4 mb-4">
-                    <div class="card bg-dark text-light gallery-item" data-bs-toggle="modal" data-bs-target="#mediaModal" data-group='[{"type":"image","src":"img/meetup_21_12_24.jpg","description":"Primer Meetup Bitcoin Only en La Isla de la Juventud, con panel de graduados."},{"type":"image","src":"img/meetup_21_12_24_2.jpg","description":"Momento del panel de discusión en el Meetup Bitcoin Only del 21 de diciembre de 2024."},{"type":"image","src":"img/villa choly_acept4.jpg","description":"Después del panel y la graduación, un disfrute con la familia."}]'>
+                    <div class="card bg-dark text-light gallery-item" data-bs-toggle="modal" data-bs-target="#mediaModal" data-group='[{"type":"image","src":"img/meetup_21_12_24.jpg","description":"Primer Meetup Bitcoin Only en La Isla de la Juventud, con panel de graduados."},{"type":"image","src":"img/meetup_21_12_24_2.jpg","description":"Momento del panel de discusión en el Meetup Bitcoin Only del 21 de diciembre de 2024."},{"type":"image","src":"img/villa_choly_acept4.jpg","description":"Después del panel y la graduación, un disfrute con la familia."}]'>
                         <img src="img/meetup_21_12_24.jpg" class="card-img-top gallery-image" alt="Primer Meetup Bitcoin Only">
                         <div class="card-body">
                             <h5 class="card-title">Meetup Bitcoin</h5>
@@ -463,8 +565,8 @@
                     </div>
                 </div>
                 <div class="col-md-4 mb-4">
-                    <div class="card bg-dark text-light gallery-item" data-bs-toggle="modal" data-bs-target="#mediaModal" data-group='[{"type":"image","src":"img/mostrando jade.jpg","description":"Bitalion mostrando una Jade Wallet a los estudiantes."},{"type":"image","src":"img/descargando green.jpg","description":"Un asistente descarga Green Wallet."},{"type":"image","src":"img/creando transac.jpg","description":"Creando una transacción con Green Wallet."},{"type":"image","src":"img/pagando con green.jpg","description":"Pagando con Green Wallet."},{"type":"image","src":"img/usando jade2.jpg","description":"Usando Jade Wallet con Green Wallet."},{"type":"image","src":"img/lilygo esp32.jpg","description":"Alternativa económica: LilyGo ESP32 con Green Wallet."}]'>
-                        <img src="img/mostrando jade.jpg" class="card-img-top gallery-image" alt="Blockstream Local">
+                    <div class="card bg-dark text-light gallery-item" data-bs-toggle="modal" data-bs-target="#mediaModal" data-group='[{"type":"image","src":"img/mostrando_jade.jpg","description":"Bitalion mostrando una Jade Wallet a los estudiantes."},{"type":"image","src":"img/descargando_green.jpg","description":"Un asistente descarga Green Wallet."},{"type":"image","src":"img/creando_transac.jpg","description":"Creando una transacción con Green Wallet."},{"type":"image","src":"img/pagando_con_green.jpg","description":"Pagando con Green Wallet."},{"type":"image","src":"img/usando_jade2.jpg","description":"Usando Jade Wallet con Green Wallet."},{"type":"image","src":"img/lilygo_esp32.jpg","description":"Alternativa económica: LilyGo ESP32 con Green Wallet."}]'>
+                        <img src="img/mostrando_jade.jpg" class="card-img-top gallery-image" alt="Blockstream Local">
                         <div class="card-body">
                             <h5 class="card-title">Blockstream Local</h5>
                             <p class="card-text">Primer evento Blockstream Local en La Isla de la Juventud.</p>
@@ -508,8 +610,8 @@
                     </div>
                 </div>
                 <div class="col-md-4 mb-4">
-                    <div class="card bg-dark text-light gallery-item" data-bs-toggle="modal" data-bs-target="#mediaModal" data-group='[{"type":"image","src":"img/ws1225_foto final ok.png","description":"Terminamos en apagón pero contentos por hablar y compartir Bitcoin."},{"type":"image","src":"img/ws1225_1.png","description":"Comenzamos hablando del dinero y porque Bitcoin es buendinero y maneras de obtenerlo."},{"type":"image","src":"img/ws1225_2.png","description":"Entrando en materia y explicando como funciona Mostro."},{"type":"image","src":"img/ws1225_3.png","description":"Una persona nueva se decide a recibir sus primeros SAT mediante un P2P."},{"type":"image","src":"img/ws1225_4.png","description":"LaChispa pagando el monto de la operación."},{"type":"image","src":"img/ws1225_5.png","description":"Conclusión de la operación con calificación satisfactoria."},{"type":"image","src":"img/ws1225_10.png","description":"Y se fue la corriente."},{"type":"image","src":"img/ws1225_11.png","description":"Aún sin corriente seguimos enseñando de Bitcoin."},{"type":"image","src":"img/ws1225_nfc.png","description":"Aparecieron las NFC de Cuba Bitcoin y LaCrypta."},{"type":"image","src":"img/ws1225_nfc 2.png","description":"Pagando con una NFC."},{"type":"image","src":"img/ws1225_nfc wos2.png","description":"Pago recibido en Wallet of Satoshi."}]'>
-                        <img src="img/ws1225_foto final ok.png" class="card-img-top gallery-image" alt="Workshop Diciembre 2025 - P2P sin KYC">
+                    <div class="card bg-dark text-light gallery-item" data-bs-toggle="modal" data-bs-target="#mediaModal" data-group='[{"type":"image","src":"img/ws1225_foto_final_ok.png","description":"Terminamos en apagón pero contentos por hablar y compartir Bitcoin."},{"type":"image","src":"img/ws1225_1.png","description":"Comenzamos hablando del dinero y porque Bitcoin es buendinero y maneras de obtenerlo."},{"type":"image","src":"img/ws1225_2.png","description":"Entrando en materia y explicando como funciona Mostro."},{"type":"image","src":"img/ws1225_3.png","description":"Una persona nueva se decide a recibir sus primeros SAT mediante un P2P."},{"type":"image","src":"img/ws1225_4.png","description":"LaChispa pagando el monto de la operación."},{"type":"image","src":"img/ws1225_5.png","description":"Conclusión de la operación con calificación satisfactoria."},{"type":"image","src":"img/ws1225_10.png","description":"Y se fue la corriente."},{"type":"image","src":"img/ws1225_11.png","description":"Aún sin corriente seguimos enseñando de Bitcoin."},{"type":"image","src":"img/ws1225_nfc.png","description":"Aparecieron las NFC de Cuba Bitcoin y LaCrypta."},{"type":"image","src":"img/ws1225_nfc 2.png","description":"Pagando con una NFC."},{"type":"image","src":"img/ws1225_nfc_wos2.png","description":"Pago recibido en Wallet of Satoshi."}]'>
+                        <img src="img/ws1225_foto_final_ok.png" class="card-img-top gallery-image" alt="Workshop Diciembre 2025 - P2P sin KYC">
                         <div class="card-body">
                             <h5 class="card-title">Workshop Diciembre 2025</h5>
                             <p class="card-text">P2P sin KYC</p>
@@ -524,7 +626,16 @@
                             <p class="card-text">Lo que Bitcoin me enseñó.</p>
                         </div>
                     </div>
-            </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card bg-dark text-light gallery-item" data-bs-toggle="modal" data-bs-target="#mediaModal" data-group='[{"type":"image","src":"img/bsl26_1.png","description":"Brindando información inicial."},{"type":"image","src":"img/bsl26_2.png","description":"Mostrando el temario."},{"type":"image","src":"img/bsl26_3.png","description":"MOstrando una Jade Clásica"},{"type":"image","src":"img/bsl26_4.png","description":"Preparando una Blockstream APP."}, {"type":"image","src":"img/bsl26_5.png","description":"Haciendo transferencias y firmando con la Jade Clásica."}, {"type":"image","src":"img/bsl26_6.png","description":"Repasando con el cuestionario de Blockstream."}]'>
+                        <img src="img/grupo.jpeg" class="card-img-top gallery-image" alt="Blockstream Local. Segundo en La IslaBTC.">
+                        <div class="card-body">
+                            <h5 class="card-title">Blockstream Local 2026</h5>
+                            <p class="card-text">Regresa la Autocustodia a La Isla de la Juventud.</p>
+                        </div>
+                    </div>
+                </div>
         </div>
     </section>
 
@@ -545,7 +656,7 @@
     </div>
 
     <!-- Frase -->
-    <div class="py-5 bg-light text-muted">
+    <div class="py-5 bg-dark text-light">
         <div class="container-xl px-5 my-5">
             <div class="row gx-5 justify-content-center">
                 <div class="col-lg-10 col-xl-7">
@@ -562,7 +673,7 @@
     </div>
 
     <!-- Footer -->
-    <footer class="py-5 bg-dark" id="scrollspycontact">
+    <footer class="py-5 bg-dark text-light" id="scrollspycontact">
         <div class="container-xl py-5">
             <div class="text-center mb-5 mb-xl-0">
                 <div class="mb-2 text-light">
@@ -574,7 +685,8 @@
                     <a class="fs-1 px-2 link-light" href="https://x.com/laislabtc24" target="_blank" aria-label="Twitter"><i class="fa-brands fa-square-x-twitter"></i></a>
                     <a class="fs-1 px-2 link-light" href="https://t.me/laislabtc" target="_blank" aria-label="Telegram"><i class="fa-brands fa-telegram"></i></a>
                     <a class="fs-1 px-2 link-light" href="https://primal.net/p/nprofile1qqsfywjnhye3k3efz0ggheq2wt7r3vq7l8gq5rucdau36vua7x37m6qsxsr5x" target="_blank" aria-label="Nostr"><img src="img/nostr_log_withe.jpg" alt="Nostr" id="nostr-social" class="bg-white rounded-circle"></a>
-                    <p class="mt-5">© 2025 La IslaBTC. Promoviendo la educación y el uso de Bitcoin en La Isla de la Juventud.</p>
+                    <a class="fs-1 px-2 link-light" href="https://wa.me/message/CD7MPKQBSU6YE1" target="_blank" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                    <p class="mt-5">© 2024-2026 La IslaBTC. Promoviendo la educación y el uso de Bitcoin en La Isla de la Juventud.</p>
                     <p class="mt-5">NO CONFÍES, VERIFICA.</p>
                 </div>
             </div>
