@@ -142,6 +142,7 @@
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0 fw-bold text-uppercase">
                     <li class="nav-item"><a class="nav-link" href="#">Inicio</a></li>
                     <li class="nav-item"><a class="nav-link" href="#scrollspynevents">POW</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#scrollspymeetups">Meetups</a></li>
                     <li class="nav-item"><a class="nav-link" href="#scrollspyyouth">Jóvenes</a></li>
                     <li class="nav-item"><a class="nav-link" href="#scrollspydonaciones">Dona</a></li>
                     <li class="nav-item"><a class="nav-link" href="#scrollspybusiness">Negocios</a></li>
@@ -229,8 +230,8 @@
                             </div>
                             <div class="col-md-4 col-lg-4">
                                 <i class="bi bi-people fs-1 text-warning"></i>
-                                <h4 class="fw-bold mt-2">14</h4>
-                                <p class="text-light small fst-italic">Encuentros educativos organizados por la comunidad en 1 año de creada</p>
+                                <h4 class="fw-bold mt-2">15</h4>
+                                <p class="text-light small fst-italic">Encuentros educativos organizados por la comunidad desde su creación</p>
                             </div>
                             <div class="col-md-4 col-lg-4">
                                 <i class="bi bi-shop fs-1 text-warning"></i>
@@ -248,6 +249,13 @@
                 <button class="btn btn-dark" type="button" data-bs-toggle="collapse" data-bs-target="#timelineCollapse" aria-expanded="false" aria-controls="timelineCollapse">📜 Ver historial completo de eventos</button>
                 <div class="collapse" id="timelineCollapse">
                     <div class="main-timeline">
+                        <div class="timeline right">
+                            <div class="card"><div class="card-body p-4">
+                                <h3>2026 - 22 DE MAYO</h3>
+                                <p class="text-uppercase">Bitcoin Pizza Day</p>
+                                <p class="text-muted">Hablamos de las herramientas de la comunidad: Mostro P2P para intercambios, LaChispa como billetera Lightning y ElCaju como billetera Cashu. ¡Disfrutamos de pizzas entre amigos!</p>
+                            </div></div>
+                        </div>
                         <div class="timeline left">
                             <div class="card"><div class="card-body p-4">
                                 <h3>2026 - 17 DE ENERO</h3>
@@ -363,6 +371,20 @@
                             </div></div>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Meetups -->
+    <section class="py-5 bg-dark text-light" id="scrollspymeetups" aria-labelledby="meetups-heading">
+        <div class="container-xl px-5 my-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-12">
+                    <h2 class="fw-bolder display-6 text-center" id="meetups-heading">Programa de Meetups</h2>
+                    <p class="lead text-center mb-4">24 encuentros educativos para aprender Bitcoin en comunidad</p>
+                    <div id="currentMeetup" class="mb-5"></div>
+                    <div id="allMeetups" class="row g-4"></div>
                 </div>
             </div>
         </div>
@@ -723,6 +745,15 @@
                         </div>
                     </div>
                 </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card bg-dark text-light gallery-item" data-bs-toggle="modal" data-bs-target="#mediaModal" data-group='[{"type":"image","src":"img/pizza2026_1.jpeg","description":"Reunidos para comer pizzas y hablar de Bitcoin."},{"type":"image","src":"img/pizza2026_2.jpeg","description":"Pizzas elaboradas en un negocio cercano."},{"type":"image","src":"img/pizza2026_3.jpeg","description":"Hablando de las herramientas de la comunidad."},{"type":"image","src":"img/pizza2026_4.jpeg","description":"Pagando con tarjeta NFC."}]'>
+                        <img src="img/pizza2026_1.jpeg" class="card-img-top gallery-image" alt="Bitcoin PizzaDay 2026">
+                        <div class="card-body">
+                            <h5 class="card-title">Bitcoin PizzaDay 2026</h5>
+                            <p class="card-text">22 de mayo de 2026. Segundo Bitcoin PizzaDay en La Isla de la Juventud.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -811,6 +842,127 @@
 
             modalDescription.textContent = group[0].description || '';
         });
+
+        // Meetups data
+        const meetups = [
+            { id: 1, level: "Nivel 1 — Introducción y fundamentos", title: "Conociendo el dinero", description: "Historia del dinero y por qué Bitcoin aparece como alternativa.", date: "2026-06-26", place: "Micro70", time: "3:00 PM" },
+            { id: 2, level: "Nivel 1 — Introducción y fundamentos", title: "Una aproximación fácil a Bitcoin", description: "Conceptos básicos explicados de forma sencilla." },
+            { id: 3, level: "Nivel 1 — Introducción y fundamentos", title: "¿Qué hace diferente a Bitcoin?", description: "Escasez, descentralización y soberanía financiera." },
+            { id: 4, level: "Nivel 1 — Introducción y fundamentos", title: "Bitcoin Onchain: ¿cómo funciona?", description: "Transacciones, bloques y confirmaciones." },
+            { id: 5, level: "Nivel 1 — Introducción y fundamentos", title: "Instalando nuestra primera billetera Bitcoin", description: "Primer contacto práctico con una wallet." },
+            { id: 6, level: "Nivel 1 — Introducción y fundamentos", title: "Probando Nunchuk: una billetera onchain", description: "Uso básico y recepción de pagos." },
+            { id: 7, level: "Nivel 2 — Lightning y pagos rápidos", title: "Bitcoin Lightning: la capa 2 de Bitcoin", description: "Pagos instantáneos y de bajo costo." },
+            { id: 8, level: "Nivel 2 — Lightning y pagos rápidos", title: "Usando LaChispa: una solución de la comunidad", description: "Herramientas locales para pagos Lightning." },
+            { id: 9, level: "Nivel 2 — Lightning y pagos rápidos", title: "Cómo recibir pagos Lightning", description: "Facturas, QR y funcionamiento básico." },
+            { id: 10, level: "Nivel 2 — Lightning y pagos rápidos", title: "Facturas Lightning y pagos NFC", description: "Nuevas experiencias de pago utilizando NFC." },
+            { id: 11, level: "Nivel 2 — Lightning y pagos rápidos", title: "Cómo aceptar Bitcoin en mi negocio", description: "Introducción práctica para comerciantes." },
+            { id: 12, level: "Nivel 2 — Lightning y pagos rápidos", title: "Bitcoin en la vida diaria", description: "Pagos, ahorro y experiencias reales." },
+            { id: 13, level: "Nivel 3 — Liquid y herramientas avanzadas", title: "Liquid: una cadena lateral interesante", description: "Introducción a Liquid Network." },
+            { id: 14, level: "Nivel 3 — Liquid y herramientas avanzadas", title: "Probando Blockstream App", description: "Bitcoin Onchain, Lightning y Liquid en un solo lugar." },
+            { id: 15, level: "Nivel 3 — Liquid y herramientas avanzadas", title: "Cómo mover fondos entre Lightning y Liquid", description: "Conceptos básicos de interoperabilidad." },
+            { id: 16, level: "Nivel 3 — Liquid y herramientas avanzadas", title: "Seguridad básica para usuarios de Bitcoin", description: "Buenas prácticas y errores comunes." },
+            { id: 17, level: "Nivel 3 — Liquid y herramientas avanzadas", title: "Privacidad en Bitcoin para principiantes", description: "Herramientas y conceptos esenciales." },
+            { id: 18, level: "Nivel 3 — Liquid y herramientas avanzadas", title: "Nostr: redes sociales y pagos sobre Bitcoin", description: "Introducción al ecosistema social descentralizado." },
+            { id: 19, level: "Nivel 4 — Autocustodia y privacidad", title: "La autocustodia con billeteras frías", description: "Principios básicos de soberanía financiera." },
+            { id: 20, level: "Nivel 4 — Autocustodia y privacidad", title: "Usando Jade de Blockstream y LilyGO ESP32", description: "Introducción práctica a hardware wallets accesibles." },
+            { id: 21, level: "Nivel 4 — Autocustodia y privacidad", title: "Aprendiendo con Trezor a custodiar nuestros fondos", description: "Respaldo y recuperación de semillas." },
+            { id: 22, level: "Nivel 4 — Autocustodia y privacidad", title: "Cashu: la capa 3 de Bitcoin bien privada", description: "Introducción al ecash y privacidad." },
+            { id: 23, level: "Nivel 4 — Autocustodia y privacidad", title: "Aprendamos a usar ElCajú", description: "Uso práctico de la billetera Cashu de la comunidad." },
+            { id: 24, level: "Nivel 4 — Autocustodia y privacidad", title: "Mostro, LNp2pBot y remesas con Bitcoin hacia Cuba", description: "Uso práctico de herramientas P2P sin KYC para comprar, vender y enviar valor utilizando Bitcoin y Lightning." }
+        ];
+
+        function renderMeetups() {
+            const now = new Date();
+            const currentYear = now.getFullYear();
+            const currentMonth = now.getMonth();
+            const monthNames = ["Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre"];
+
+            function parseLocalDate(str) {
+                const p = str.split('-');
+                return new Date(+p[0], +p[1] - 1, +p[2]);
+            }
+
+            const upcoming = meetups.filter(m => {
+                if (!m.date) return false;
+                const d = parseLocalDate(m.date);
+                return d.getFullYear() === currentYear && d.getMonth() === currentMonth;
+            });
+
+            const next = meetups.filter(m => {
+                if (!m.date) return false;
+                const d = parseLocalDate(m.date);
+                const nextMonth = currentMonth === 11 ? 0 : currentMonth + 1;
+                const nextYear = currentMonth === 11 ? currentYear + 1 : currentYear;
+                return d.getFullYear() === nextYear && d.getMonth() === nextMonth;
+            });
+
+            const currentDiv = document.getElementById('currentMeetup');
+            let html = '';
+            if (upcoming.length > 0) {
+                html += '<h3 class="text-warning mb-3"><i class="bi bi-calendar-event-fill"></i> Este mes (' + monthNames[currentMonth] + ' ' + currentYear + ')</h3>';
+                upcoming.forEach(m => {
+                    const d = parseLocalDate(m.date);
+                    html += '<div class="card bg-warning text-dark mb-3"><div class="card-body p-4">';
+                    html += '<h4 class="card-title fw-bold">#' + m.id + ' — ' + m.title + '</h4>';
+                    html += '<p class="card-text fs-5">' + m.description + '</p>';
+                    html += '<div class="d-flex flex-wrap gap-3 mt-3">';
+                    html += '<span class="badge bg-dark fs-6"><i class="bi bi-calendar"></i> ' + d.getDate() + ' de ' + monthNames[d.getMonth()] + ' de ' + d.getFullYear() + '</span>';
+                    if (m.time) html += '<span class="badge bg-dark fs-6"><i class="bi bi-clock"></i> ' + m.time + '</span>';
+                    if (m.place) html += '<span class="badge bg-dark fs-6"><i class="bi bi-geo-alt"></i> ' + m.place + '</span>';
+                    html += '</div></div></div>';
+                });
+            }
+            if (next.length > 0) {
+                const nextMonthIdx = currentMonth === 11 ? 0 : currentMonth + 1;
+                const nextYear = currentMonth === 11 ? currentYear + 1 : currentYear;
+                html += '<h3 class="text-info mb-3"><i class="bi bi-calendar-plus"></i> Próximo mes (' + monthNames[nextMonthIdx] + ' ' + nextYear + ')</h3>';
+                next.forEach(m => {
+                    const d = parseLocalDate(m.date);
+                    html += '<div class="card bg-info text-dark mb-3"><div class="card-body p-4">';
+                    html += '<h4 class="card-title fw-bold">#' + m.id + ' — ' + m.title + '</h4>';
+                    html += '<p class="card-text fs-5">' + m.description + '</p>';
+                    html += '<div class="d-flex flex-wrap gap-3 mt-3">';
+                    html += '<span class="badge bg-dark fs-6"><i class="bi bi-calendar"></i> ' + d.getDate() + ' de ' + monthNames[d.getMonth()] + ' de ' + d.getFullYear() + '</span>';
+                    if (m.time) html += '<span class="badge bg-dark fs-6"><i class="bi bi-clock"></i> ' + m.time + '</span>';
+                    if (m.place) html += '<span class="badge bg-dark fs-6"><i class="bi bi-geo-alt"></i> ' + m.place + '</span>';
+                    html += '</div></div></div>';
+                });
+            }
+            if (!upcoming.length && !next.length) {
+                html += '<div class="alert alert-secondary text-center fs-5">Próximamente estaremos anunciando las fechas de los meetups.</div>';
+            }
+            currentDiv.innerHTML = html;
+
+            const allDiv = document.getElementById('allMeetups');
+            let gridHtml = '';
+            let currentLevel = '';
+            meetups.forEach(m => {
+                if (m.level !== currentLevel) {
+                    currentLevel = m.level;
+                    gridHtml += '<div class="col-12"><h4 class="text-warning border-bottom border-warning pb-2 mt-3">' + currentLevel + '</h4></div>';
+                }
+                const hasDetails = !!(m.date && m.place && m.time);
+                gridHtml += '<div class="col-md-6 col-lg-4"><div class="card bg-dark text-light h-100 border-' + (hasDetails ? 'warning' : 'secondary') + '"><div class="card-body">';
+                gridHtml += '<div class="d-flex justify-content-between align-items-start mb-2">';
+                gridHtml += '<h6 class="card-subtitle text-muted">Meetup #' + m.id + '</h6>';
+                if (hasDetails) gridHtml += '<span class="badge bg-warning text-dark">Programado</span>';
+                gridHtml += '</div>';
+                gridHtml += '<h5 class="card-title">' + m.title + '</h5>';
+                gridHtml += '<p class="card-text small text-muted">' + m.description + '</p>';
+                if (m.date) {
+                    const d = parseLocalDate(m.date);
+                    gridHtml += '<div class="small mt-2">';
+                    gridHtml += '<span class="d-block"><i class="bi bi-calendar text-warning"></i> ' + d.getDate() + ' de ' + monthNames[d.getMonth()] + '</span>';
+                    if (m.time) gridHtml += '<span class="d-block"><i class="bi bi-clock text-warning"></i> ' + m.time + '</span>';
+                    if (m.place) gridHtml += '<span class="d-block"><i class="bi bi-geo-alt text-warning"></i> ' + m.place + '</span>';
+                    gridHtml += '</div>';
+                }
+                gridHtml += '</div></div></div>';
+            });
+            allDiv.innerHTML = gridHtml;
+        }
+
+        renderMeetups();
 
         // Formulario Mujeres
         document.getElementById('formMujeres').addEventListener('submit', function(e) {
