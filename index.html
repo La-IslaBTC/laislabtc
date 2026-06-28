@@ -862,8 +862,8 @@
         // Meetups data
         const meetups = [
             { id: 1, level: "Nivel 1 — Introducción y fundamentos", title: "Conociendo el dinero", description: "Historia del dinero y por qué Bitcoin aparece como alternativa.", date: "2026-06-26", place: "Micro70", time: "3:00 PM" },
-            { id: 2, level: "Nivel 1 — Introducción y fundamentos", title: "Una aproximación fácil a Bitcoin", description: "Conceptos básicos explicados de forma sencilla." },
-            { id: 3, level: "Nivel 1 — Introducción y fundamentos", title: "¿Qué hace diferente a Bitcoin?", description: "Escasez, descentralización y soberanía financiera." },
+            { id: 2, level: "Nivel 1 — Introducción y fundamentos", title: "Una aproximación fácil a Bitcoin", description: "Conceptos básicos explicados de forma sencilla.", date: "2026-07-09", place: "Micro70", time: "3:00 PM" },
+            { id: 3, level: "Nivel 1 — Introducción y fundamentos", title: "¿Qué hace diferente a Bitcoin?", description: "Escasez, descentralización y soberanía financiera.", date: "2026-07-23", place: "Micro70", time: "3:00 PM" },
             { id: 4, level: "Nivel 1 — Introducción y fundamentos", title: "Bitcoin Onchain: ¿cómo funciona?", description: "Transacciones, bloques y confirmaciones." },
             { id: 5, level: "Nivel 1 — Introducción y fundamentos", title: "Instalando nuestra primera billetera Bitcoin", description: "Primer contacto práctico con una wallet." },
             { id: 6, level: "Nivel 1 — Introducción y fundamentos", title: "Probando Nunchuk: una billetera onchain", description: "Uso básico y recepción de pagos." },
@@ -898,14 +898,24 @@
                 return new Date(+p[0], +p[1] - 1, +p[2]);
             }
 
+            const done = meetups.filter(m => {
+                if (!m.date) return false;
+                const d = parseLocalDate(m.date);
+                return d < now;
+            }).sort((a, b) => parseLocalDate(b.date) - parseLocalDate(a.date));
+
             const upcoming = meetups.filter(m => {
                 if (!m.date) return false;
+                const d = parseLocalDate(m.date);
+                return d >= now;
+            });
+
+            const thisMonth = upcoming.filter(m => {
                 const d = parseLocalDate(m.date);
                 return d.getFullYear() === currentYear && d.getMonth() === currentMonth;
             });
 
-            const next = meetups.filter(m => {
-                if (!m.date) return false;
+            const next = upcoming.filter(m => {
                 const d = parseLocalDate(m.date);
                 const nextMonth = currentMonth === 11 ? 0 : currentMonth + 1;
                 const nextYear = currentMonth === 11 ? currentYear + 1 : currentYear;
@@ -914,9 +924,9 @@
 
             const currentDiv = document.getElementById('currentMeetup');
             let html = '';
-            if (upcoming.length > 0) {
+            if (thisMonth.length > 0) {
                 html += '<h3 class="text-warning mb-3"><i class="bi bi-calendar-event-fill"></i> Este mes (' + monthNames[currentMonth] + ' ' + currentYear + ')</h3>';
-                upcoming.forEach(m => {
+                thisMonth.forEach(m => {
                     const d = parseLocalDate(m.date);
                     html += '<div class="card bg-warning text-dark mb-3"><div class="card-body p-4">';
                     html += '<h4 class="card-title fw-bold">#' + m.id + ' — ' + m.title + '</h4>';
@@ -944,8 +954,34 @@
                     html += '</div></div></div>';
                 });
             }
-            if (!upcoming.length && !next.length) {
-                html += '<div class="alert alert-secondary text-center fs-5">Próximamente estaremos anunciando las fechas de los meetups.</div>';
+            if (!thisMonth.length && !next.length) {
+                if (upcoming.length > 0) {
+                    const nextUp = upcoming[0];
+                    const d = parseLocalDate(nextUp.date);
+                    html += '<h3 class="text-info mb-3"><i class="bi bi-calendar-plus"></i> Próximo meetup</h3>';
+                    html += '<div class="card bg-info text-dark mb-3"><div class="card-body p-4">';
+                    html += '<h4 class="card-title fw-bold">#' + nextUp.id + ' — ' + nextUp.title + '</h4>';
+                    html += '<p class="card-text fs-5">' + nextUp.description + '</p>';
+                    html += '<div class="d-flex flex-wrap gap-3 mt-3">';
+                    html += '<span class="badge bg-dark fs-6"><i class="bi bi-calendar"></i> ' + d.getDate() + ' de ' + monthNames[d.getMonth()] + ' de ' + d.getFullYear() + '</span>';
+                    if (nextUp.time) html += '<span class="badge bg-dark fs-6"><i class="bi bi-clock"></i> ' + nextUp.time + '</span>';
+                    if (nextUp.place) html += '<span class="badge bg-dark fs-6"><i class="bi bi-geo-alt"></i> ' + nextUp.place + '</span>';
+                    html += '</div></div></div>';
+                } else {
+                    html += '<div class="alert alert-secondary text-center fs-5">Próximamente estaremos anunciando las fechas de los meetups.</div>';
+                }
+            }
+            if (done.length > 0) {
+                html += '<h3 class="text-success mb-3 mt-4"><i class="bi bi-check-circle-fill"></i> Realizados</h3>';
+                done.forEach(m => {
+                    const d = parseLocalDate(m.date);
+                    html += '<div class="card bg-dark text-light border-success mb-2"><div class="card-body p-3">';
+                    html += '<div class="d-flex justify-content-between align-items-center">';
+                    html += '<div><h5 class="card-title mb-1">#' + m.id + ' — ' + m.title + '</h5>';
+                    html += '<p class="card-text small text-muted mb-0">' + m.description + '</p></div>';
+                    html += '<span class="badge bg-success fs-6"><i class="bi bi-calendar"></i> ' + d.getDate() + ' de ' + monthNames[d.getMonth()] + '</span>';
+                    html += '</div></div></div>';
+                });
             }
             currentDiv.innerHTML = html;
 
