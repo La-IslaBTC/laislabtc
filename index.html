@@ -819,9 +819,9 @@
                     <hr class="hr my-5" />
                     <p class="mb-0">Accede a contenido 100% gratuito.</p>
                     <p>Únete a nuestras comunidades</p>
-                    <a class="fs-1 px-2 link-light" href="https://x.com/laislabtc24" target="_blank" aria-label="Twitter"><i class="fa-brands fa-square-x-twitter"></i></a>
-                    <a class="fs-1 px-2 link-light" href="https://t.me/laislabtc" target="_blank" aria-label="Telegram"><i class="fa-brands fa-telegram"></i></a>
-                    <a class="fs-1 px-2 link-light" href="https://wa.me/message/CD7MPKQBSU6YE1" target="_blank" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a class="fs-1 px-2 link-light" href="https://x.com/laislabtc24" target="_blank" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+                    <a class="fs-1 px-2 link-light" href="https://t.me/laislabtc" target="_blank" aria-label="Telegram"><i class="bi bi-telegram"></i></a>
+                    <a class="fs-1 px-2 link-light" href="https://wa.me/message/CD7MPKQBSU6YE1" target="_blank" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
                     <a class="fs-1 px-2 link-light" href="https://primal.net/p/nprofile1qqsfywjnhye3k3efz0ggheq2wt7r3vq7l8gq5rucdau36vua7x37m6qsxsr5x" target="_blank" aria-label="Nostr"><img src="img/nostr_log_withe.jpg" alt="Nostr" id="nostr-social" class="bg-white rounded-circle"></a>
                     <p class="mt-5">© 2024-2026 La IslaBTC. Promoviendo la educación y el uso de Bitcoin en La Isla de la Juventud.</p>
                     <p class="mt-5">NO CONFÍES, VERIFICA.</p>
@@ -971,18 +971,6 @@
                     html += '<div class="alert alert-secondary text-center fs-5">Próximamente estaremos anunciando las fechas de los meetups.</div>';
                 }
             }
-            if (done.length > 0) {
-                html += '<h3 class="text-success mb-3 mt-4"><i class="bi bi-check-circle-fill"></i> Realizados</h3>';
-                done.forEach(m => {
-                    const d = parseLocalDate(m.date);
-                    html += '<div class="card bg-dark text-light border-success mb-2"><div class="card-body p-3">';
-                    html += '<div class="d-flex justify-content-between align-items-center">';
-                    html += '<div><h5 class="card-title mb-1">#' + m.id + ' — ' + m.title + '</h5>';
-                    html += '<p class="card-text small text-muted mb-0">' + m.description + '</p></div>';
-                    html += '<span class="badge bg-success fs-6"><i class="bi bi-calendar"></i> ' + d.getDate() + ' de ' + monthNames[d.getMonth()] + '</span>';
-                    html += '</div></div></div>';
-                });
-            }
             currentDiv.innerHTML = html;
 
             const allDiv = document.getElementById('allMeetups');
@@ -997,7 +985,10 @@
                 gridHtml += '<div class="col-md-6 col-lg-4"><div class="card bg-dark text-light h-100 border-' + (hasDetails ? 'warning' : 'secondary') + '"><div class="card-body">';
                 gridHtml += '<div class="d-flex justify-content-between align-items-start mb-2">';
                 gridHtml += '<h6 class="card-subtitle text-muted">Meetup #' + m.id + '</h6>';
-                if (hasDetails) gridHtml += '<span class="badge bg-warning text-dark">Programado</span>';
+                if (hasDetails) {
+                    const isPast = parseLocalDate(m.date) < now;
+                    gridHtml += '<span class="badge bg-' + (isPast ? 'success' : 'warning') + ' text-' + (isPast ? 'light' : 'dark') + '">' + (isPast ? 'Realizado' : 'Programado') + '</span>';
+                }
                 gridHtml += '</div>';
                 gridHtml += '<h5 class="card-title">' + m.title + '</h5>';
                 gridHtml += '<p class="card-text small text-muted">' + m.description + '</p>';
