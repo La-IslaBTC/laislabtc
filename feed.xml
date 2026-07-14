@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>La IslaBTC - Comunidad Bitcoin</title>
+        <description>Comunidad Bitcoin en La Isla de la Juventud. Educación gratuita sobre Bitcoin, cursos presenciales, eventos y promoción de la economía circular.</description>
+        <link>https://laislabtc.org</link>
+        <atom:link href="https://laislabtc.org/feed.xml" rel="self" type="application/rss+xml"/>
+        <language>es</language>
+        <lastBuildDate>Wed, 14 Jul 2026 12:00:00 -0400</lastBuildDate>
+        <item>
+            <title>Meetup Junio 2026: Conociendo el Dinero</title>
+            <description>Historia del dinero y por qué Bitcoin aparece como una alternativa. Primer meetup del programa educativo 2026.</description>
+            <link>https://laislabtc.org#scrollspymeetups</link>
+            <pubDate>Fri, 26 Jun 2026 15:00:00 -0400</pubDate>
+            <guid>https://laislabtc.org#meetup-2026-06</guid>
+        </item>
+        <item>
+            <title>Bitcoin PizzaDay 2026</title>
+            <description>Segundo Bitcoin PizzaDay en La Isla de la Juventud. 22 de mayo de 2026.</description>
+            <link>https://laislabtc.org#scrollspymedia</link>
+            <pubDate>Fri, 22 May 2026 12:00:00 -0400</pubDate>
+            <guid>https://laislabtc.org#pizzaday-2026</guid>
+        </item>
+        <item>
+            <title>Blockstream Local 2026</title>
+            <description>Segundo Blockstream Local en La Isla de la Juventud. Aprendiendo sobre autocustodia con Jade Wallet.</description>
+            <link>https://laislabtc.org#scrollspymedia</link>
+            <pubDate>Sat, 17 Jan 2026 10:00:00 -0400</pubDate>
+            <guid>https://laislabtc.org#bsl-2026</guid>
+        </item>
+        <item>
+            <title>Meetup Diciembre 2025: Lo que Bitcoin me enseñó</title>
+            <description>Volvimos a recordar los diferentes encuentros en la comunidad y conversamos sobre lo que hemos aprendido de Bitcoin.</description>
+            <link>https://laislabtc.org#scrollspymedia</link>
+            <pubDate>Sat, 20 Dec 2025 10:00:00 -0400</pubDate>
+            <guid>https://laislabtc.org#meetup-2025-12</guid>
+        </item>
+        <item>
+            <title>Workshop: P2P sin KYC</title>
+            <description>Utilizamos Mostro como herramienta para realizar P2P y LaChispa Wallet para enviar y recibir los SAT.</description>
+            <link>https://laislabtc.org#scrollspymedia</link>
+            <pubDate>Sat, 06 Dec 2025 10:00:00 -0400</pubDate>
+            <guid>https://laislabtc.org#ws-p2p-2025</guid>
+        </item>
+        <item>
+            <title>Meetup Noviembre 2025: La IslaBTC un año después</title>
+            <description>Conversamos sobre los retos, desafíos y logros en el primer año de la comunidad. Pagamos la merienda con Cashu.</description>
+            <link>https://laislabtc.org#scrollspymedia</link>
+            <pubDate>Sat, 16 Nov 2025 10:00:00 -0400</pubDate>
+            <guid>https://laislabtc.org#meetup-2025-11</guid>
+        </item>
+        <item>
+            <title>Workshop: Billeteras Lightning</title>
+            <description>Comenzamos a utilizar LaChispa Wallet. Pagos rápidos y con 0 fee usando el nodo de la comunidad.</description>
+            <link>https://laislabtc.org#scrollspymedia</link>
+            <pubDate>Sat, 20 Jul 2025 10:00:00 -0400</pubDate>
+            <guid>https://laislabtc.org#ws-lightning-2025</guid>
+        </item>
+        <item>
+            <title>Trezor Academy en La Isla de la Juventud</title>
+            <description>Segundo Evento Trezor Academy en Cuba. Primera vez en la Isla de la Juventud. 8 graduados.</description>
+            <link>https://laislabtc.org#scrollspymedia</link>
+            <pubDate>Sat, 26 Apr 2025 10:00:00 -0400</pubDate>
+            <guid>https://laislabtc.org#trezor-2025</guid>
+        </item>
+        <item>
+            <title>Primer Meetup Bitcoin Only y Graduación</title>
+            <description>Primer evento Bitcoin Only en La Isla de la Juventud. Graduación del Primer Curso Cubano de Bitcoin.</description>
+            <link>https://laislabtc.org#scrollspymedia</link>
+            <pubDate>Sat, 21 Dec 2024 10:00:00 -0400</pubDate>
+            <guid>https://laislabtc.org#meetup-2024-12</guid>
+        </item>
+        <item>
+            <title>Creación de La IslaBTC</title>
+            <description>Se crea la comunidad La IslaBTC. Bloque 870629. Comunidad presencial para la educación en Bitcoin en La Isla de la Juventud.</description>
+            <link>https://laislabtc.org</link>
+            <pubDate>Fri, 16 Nov 2024 10:00:00 -0400</pubDate>
+            <guid>https://laislabtc.org#creacion</guid>
+        </item>
+    </channel>
+</rss>

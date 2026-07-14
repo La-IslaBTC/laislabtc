@@ -4,21 +4,98 @@
     
     <url>
         <loc>https://laislabtc.org/</loc>
-        <lastmod>2026-02-01</lastmod>
+        <lastmod>2026-07-14</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
-    </url>
-    
-    <!-- Images with their metadata -->
-    <url>
-        <loc>https://laislabtc.org/img/logo-laislabtc-minimalista.jpg</loc>
-        <lastmod>2024-11-16</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.8</priority>
         <image:image>
             <image:loc>https://laislabtc.org/img/logo-laislabtc-minimalista.jpg</image:loc>
             <image:title>Logo La IslaBTC - Comunidad Bitcoin</image:title>
-            <image:caption>Logo minimalista de La IslaBTC, comunidad Bitcoin en la Isla de la Juventud, Cuba</image:caption>
+            <image:caption>Logo de La IslaBTC, comunidad Bitcoin en La Isla de la Juventud, Cuba</image:caption>
+        </image:image>
+        <image:image>
+            <image:loc>https://laislabtc.org/img/meetup_21_12_24.jpg</image:loc>
+            <image:title>Primer Meetup Bitcoin Only</image:title>
+            <image:caption>Primer Meetup Bitcoin Only en La Isla de la Juventud, 21 de diciembre de 2024</image:caption>
+        </image:image>
+        <image:image>
+            <image:loc>https://laislabtc.org/img/centro_bitcoin2.jpg</image:loc>
+            <image:title>Centro Bitcoin La IslaBTC</image:title>
+            <image:caption>Centro Bitcoin de la comunidad La IslaBTC en Nueva Gerona</image:caption>
+        </image:image>
+        <image:image>
+            <image:loc>https://laislabtc.org/img/taza_bitcoin.jpg</image:loc>
+            <image:title>Taza Bitcoin MercaIsla</image:title>
+            <image:caption>Producto cerámico con logo Bitcoin en MercaIsla</image:caption>
+        </image:image>
+        <image:image>
+            <image:loc>https://laislabtc.org/img/luky-ta-1.jpg</image:loc>
+            <image:title>El Luky Ta Loko</image:title>
+            <image:caption>Tienda El Luky Ta Loko que acepta Bitcoin en La Isla de la Juventud</image:caption>
+        </image:image>
+        <image:image>
+            <image:loc>https://laislabtc.org/img/villa_choly.jpg</image:loc>
+            <image:title>Villa Choly</image:title>
+            <image:caption>Bar-Restaurant Villa Choly que acepta Bitcoin</image:caption>
+        </image:image>
+        <image:image>
+            <image:loc>https://laislabtc.org/img/todocabello2.jpg</image:loc>
+            <image:title>Todo para tu Cabello</image:title>
+            <image:caption>Tienda de productos para el cabello que acepta Bitcoin</image:caption>
+        </image:image>
+        <image:image>
+            <image:loc>https://laislabtc.org/img/todounpoco2.jpg</image:loc>
+            <image:title>De todo un poco</image:title>
+            <image:caption>Tienda de productos para manicura que acepta Bitcoin</image:caption>
+        </image:image>
+        <image:image>
+            <image:loc>https://laislabtc.org/img/ISLACELL1.jpeg</image:loc>
+            <image:title>ISLACELL</image:title>
+            <image:caption>Taller de reparación de teléfonos celulares que acepta Bitcoin</image:caption>
+        </image:image>
+        <image:image>
+            <image:loc>https://laislabtc.org/img/frase_semilla_jade.jpg</image:loc>
+            <image:title>Blockstream Jade Wallet</image:title>
+            <image:caption>Usando Jade Wallet con Blockstream APP en La IslaBTC</image:caption>
+        </image:image>
+        <image:image>
+            <image:loc>https://laislabtc.org/img/curso_cuban0_clase1.jpg</image:loc>
+            <image:title>Curso de Bitcoin</image:title>
+            <image:caption>Clase inicial del Primer Curso Básico Cubano de Bitcoin en Villa Choly</image:caption>
+        </image:image>
+        <image:image>
+            <image:loc>https://laislabtc.org/img/centro_bitcoin1.jpg</image:loc>
+            <image:title>Centro Bitcoin</image:title>
+            <image:caption>Centro Bitcoin de La IslaBTC en Calle 24 #5506, Nueva Gerona</image:caption>
+        </image:image>
+        <image:image>
+            <image:loc>https://laislabtc.org/img/inconf1.jpg</image:loc>
+            <image:title>Documental INCONFISCABLE</image:title>
+            <image:caption>Proyección del documental INCONFISCABLE en el Centro Bitcoin</image:caption>
+        </image:image>
+        <image:image>
+            <image:loc>https://laislabtc.org/img/meetup_comerciantes1.jpg</image:loc>
+            <image:title>Meetup Comerciantes</image:title>
+            <image:caption>Encuentro con comerciantes locales de Nueva Gerona</image:caption>
+        </image:image>
+        <image:image>
+            <image:loc>https://laislabtc.org/img/trezor4.jpg</image:loc>
+            <image:title>Trezor Academy</image:title>
+            <image:caption>Segundo Evento Trezor Academy en La Isla de la Juventud</image:caption>
+        </image:image>
+        <image:image>
+            <image:loc>https://laislabtc.org/img/grupo.jpeg</image:loc>
+            <image:title>Blockstream Local 2026</image:title>
+            <image:caption>Segundo Blockstream Local en La Isla de la Juventud</image:caption>
+        </image:image>
+        <image:image>
+            <image:loc>https://laislabtc.org/img/pizza2026_1.jpeg</image:loc>
+            <image:title>Bitcoin PizzaDay 2026</image:title>
+            <image:caption>Segundo Bitcoin PizzaDay en La Isla de la Juventud</image:caption>
+        </image:image>
+        <image:image>
+            <image:loc>https://laislabtc.org/img/mtupjunio26_1.jpeg</image:loc>
+            <image:title>Meetup Junio 2026</image:title>
+            <image:caption>Meetup Conociendo el Dinero - Programa educativo 2026</image:caption>
         </image:image>
     </url>
     

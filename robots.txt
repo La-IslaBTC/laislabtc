@@ -7,6 +7,9 @@ Allow: /js/
 # Sitemap
 Sitemap: https://laislabtc.org/sitemap.xml
 
+# Feed
+Allow: /feed.xml
+
 # Block common non-content paths
 Disallow: /temp/
 Disallow: /.git/

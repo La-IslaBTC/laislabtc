@@ -1,0 +1,22 @@
+{
+    "name": "La IslaBTC - Comunidad Bitcoin",
+    "short_name": "LaIslaBTC",
+    "description": "Comunidad Bitcoin en La Isla de la Juventud. Educación gratuita sobre Bitcoin.",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#000000",
+    "theme_color": "#f0ad4e",
+    "orientation": "any",
+    "icons": [
+        {
+            "src": "img/logo-laislabtc-minimalista.jpg",
+            "sizes": "192x192",
+            "type": "image/jpeg"
+        },
+        {
+            "src": "img/logo-laislabtc-minimalista.jpg",
+            "sizes": "512x512",
+            "type": "image/jpeg"
+        }
+    ]
+}
