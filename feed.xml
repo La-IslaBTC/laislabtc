@@ -6,7 +6,21 @@
         <link>https://laislabtc.org</link>
         <atom:link href="https://laislabtc.org/feed.xml" rel="self" type="application/rss+xml"/>
         <language>es</language>
-        <lastBuildDate>Wed, 14 Jul 2026 12:00:00 -0400</lastBuildDate>
+        <lastBuildDate>Sat, 01 Aug 2026 12:00:00 -0400</lastBuildDate>
+        <item>
+            <title>Meetup #5: Instalando nuestra primera billetera Bitcoin</title>
+            <description>Primer contacto práctico con una wallet. 21 de agosto de 2026 en Micro70.</description>
+            <link>https://laislabtc.org#scrollspymeetups</link>
+            <pubDate>Fri, 21 Aug 2026 15:00:00 -0400</pubDate>
+            <guid>https://laislabtc.org#meetup-2026-08-21</guid>
+        </item>
+        <item>
+            <title>Meetup #4: Bitcoin Onchain - ¿cómo funciona?</title>
+            <description>Transacciones, bloques y confirmaciones. 6 de agosto de 2026 en Micro70.</description>
+            <link>https://laislabtc.org#scrollspymeetups</link>
+            <pubDate>Thu, 06 Aug 2026 15:00:00 -0400</pubDate>
+            <guid>https://laislabtc.org#meetup-2026-08-06</guid>
+        </item>
         <item>
             <title>Meetup Junio 2026: Conociendo el Dinero</title>
             <description>Historia del dinero y por qué Bitcoin aparece como una alternativa. Primer meetup del programa educativo 2026.</description>
