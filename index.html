@@ -611,7 +611,7 @@
                     
                     <!-- Google Form Embebido -->
                     <div class="d-flex justify-content-center">
-                        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSc-p4Jf6shbd7czm8RlPdit8XixfRd5V8wpK-grj7uClZC-Pw/viewform?embedded=true" width="100%" height="1214" frameborder="0" marginheight="0" marginwidth="0" style="max-width: 640px; border: none;"><span data-i18n="yh.load">Cargando…</span></iframe>
+                        <iframe id="youthForm" src="https://docs.google.com/forms/d/e/1FAIpQLSc-p4Jf6shbd7czm8RlPdit8XixfRd5V8wpK-grj7uClZC-Pw/viewform?embedded=true" data-src-es="https://docs.google.com/forms/d/e/1FAIpQLSc-p4Jf6shbd7czm8RlPdit8XixfRd5V8wpK-grj7uClZC-Pw/viewform?embedded=true" data-src-en="https://docs.google.com/forms/d/e/1FAIpQLSf6iCy1QwRWxxmUf7H6AC3SON3n6e6lPr3TYkX4vFkhdmSrqA/viewform?embedded=true" width="100%" height="1214" frameborder="0" marginheight="0" marginwidth="0" style="max-width: 640px; border: none;"><span data-i18n="yh.load">Cargando…</span></iframe>
                     </div>
                     
                     <hr class="my-5">
@@ -1259,6 +1259,16 @@
 
         renderMeetups();
         document.addEventListener('langchange', renderMeetups);
+
+        // Google Form bilingüe (youth)
+        function applyYouthFormLang() {
+            const frame = document.getElementById('youthForm');
+            if (!frame) return;
+            const src = getLang() === 'en' ? frame.getAttribute('data-src-en') : frame.getAttribute('data-src-es');
+            if (src && frame.getAttribute('src') !== src) frame.setAttribute('src', src);
+        }
+        applyYouthFormLang();
+        document.addEventListener('langchange', applyYouthFormLang);
 
         // Service Worker
         if ('serviceWorker' in navigator) {
